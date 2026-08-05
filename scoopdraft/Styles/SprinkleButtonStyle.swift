@@ -10,6 +10,10 @@ import SwiftUI
 struct SprinkleButtonStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
+            .font(.headline)
+            .lineLimit(1)
+            .minimumScaleFactor(0.7)
+            .frame(minWidth: 120, maxWidth: 130, minHeight: 30)
             .padding(.vertical, 10)
             .padding(.horizontal, 20)
             .foregroundStyle(.black)

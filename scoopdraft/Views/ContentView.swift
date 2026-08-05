@@ -9,40 +9,73 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
+        
+        NavigationStack {
             
-            NeapolitanBackground()
-            
-            VStack(spacing: 20) {
-                Spacer()
-                Text("Get the Scoop")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .fontDesign(.rounded)
-                Spacer()
+            ZStack {
                 
-                HStack {
-                    Button {
-                        //flagTapped(number)
-                    } label: {
-                        Text("View Rankings")
-                    }
-                    .modifier(
-                        SprinkleButtonStyle())
+                NeapolitanBackground()
+                
+                VStack(spacing: 0) {
+                    Spacer()
+                    Text("Get the Scoop")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                        .fontDesign(.rounded)
                     
-                    Button {
-                        //action
+                    Spacer()
+                    Image("IceCreamCup")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 300)
+                        .offset(y: 20)
+                    
+                    Spacer()
+                    
+                    HStack(spacing: 16) {
+                        VStack(spacing: 16) {
+                            NavigationLink {
+                                CentralRankingView()
+                            } label: {
+                                Text("View Rankings")
+                            }
+                            .modifier(SprinkleButtonStyle())
+                            
+                            
+                            NavigationLink {
+                                AddNewScoreView()
+                            }
+                            label: {
+                                Text("Add New Ranking")
+                            }
+                            .modifier(SprinkleButtonStyle())
+                        }
+                        
+                        VStack(spacing: 16) {
+                            NavigationLink {
+                                SettingsView()
+                            }
+                            label: {
+                                Text("Settings")
+                            }
+                            .modifier(SprinkleButtonStyle())
+                            
+                            NavigationLink {
+                                AddNewUserView()
+                            }
+                            label: {
+                                Text("Add new User")
+                            }
+                            .modifier(SprinkleButtonStyle())
+                        }
                     }
-                    label: {
-                        Text("Add New Ranking")
-                    }
-                    .modifier(SprinkleButtonStyle())
+                    .padding(.bottom, 90)
                 }
-                .padding(.bottom, 90)
             }
         }
     }
 }
+
 
 #Preview {
     ContentView()
