@@ -1,11 +1,11 @@
 //
-//  IceCreamDeliveryMethod.swift
+//  IceCreamServingMethod.swift
 //  scoopdraft
 //
 //  Created by Stewart Matthew J on 8/22/26.
 //
 
-enum IceCreamDeliveryMethod: String, CaseIterable {
+enum IceCreamServingMethod: String, CaseIterable {
     case sugarCone = "Sugar Cone"
     case waffleCone = "Waffle Cone"
     case iceCreamFloat = "Ice Cream Float"
