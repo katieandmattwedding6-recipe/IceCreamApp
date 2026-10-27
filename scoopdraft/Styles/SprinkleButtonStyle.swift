@@ -23,3 +23,9 @@ struct SprinkleButtonStyle: ViewModifier {
                 Capsule().fill(SprinkleJar.randomColor()))
     }
 }
+
+extension View {
+    func SprinkleStyle() -> some View {
+        modifier(SprinkleButtonStyle())
+    }
+}

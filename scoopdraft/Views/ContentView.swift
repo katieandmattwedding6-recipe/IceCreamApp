@@ -39,7 +39,7 @@ struct ContentView: View {
                             } label: {
                                 Text("View Rankings")
                             }
-                            .modifier(SprinkleButtonStyle())
+                            .SprinkleStyle()
                             
                             
                             NavigationLink {
@@ -48,7 +48,7 @@ struct ContentView: View {
                             label: {
                                 Text("Add New Ranking")
                             }
-                            .modifier(SprinkleButtonStyle())
+                            .SprinkleStyle()
                         }
                         
                         VStack(spacing: 16) {
@@ -58,7 +58,7 @@ struct ContentView: View {
                             label: {
                                 Text("Settings")
                             }
-                            .modifier(SprinkleButtonStyle())
+                            .SprinkleStyle()
                             
                             NavigationLink {
                                 AddNewUserView()
@@ -66,7 +66,7 @@ struct ContentView: View {
                             label: {
                                 Text("Add new User")
                             }
-                            .modifier(SprinkleButtonStyle())
+                            .SprinkleStyle()
                         }
                     }
                     .padding(.bottom, 90)
